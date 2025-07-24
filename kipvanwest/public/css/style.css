@@ -1,0 +1,144 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --font-color: #051B0D;
+    --white: #fff;
+    --black: #000;
+    --bgwhite: #F2F2F2;
+    --drkgreen: #385C45;
+    --lghtgreen: #D0DED5;
+    --red: #ED1822;
+}
+
+
+body{
+    font-family: 'Roboto', 'sans-serif';
+    background-color: var(--bgwhite);
+}
+
+a {
+    all: unset;
+    
+}
+
+a:hover{
+    cursor: pointer;
+    
+}
+
+
+.navigation-sticky{
+    z-index: 1000;
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    width:100%;
+}
+
+.navigation-wrapper{
+    position: relative;
+    margin-top: 20px;
+    height: 100px;
+    width: 85%;
+    background-color: var(--drkgreen);
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding-left: 3%;
+    padding-right: 3%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation ul{
+    height: 100%;
+    width: 50%;
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    font-size: 3.1rem;
+}
+
+.navigation img{
+    height: 75%;
+    width: auto;
+}
+
+
+h1{
+    font-size: 6.4rem;
+    color: var(--white);
+    font-family: "Playwrite DE Grund", cursive;
+}
+
+li{
+    font-family: 'Roboto';
+}
+
+header{
+    width: 100%;
+    height: 75vh; 
+    background-color: #8e8e8e;
+
+}
+
+.header-content{
+    height: 75vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.btn{
+    background-color: var(--red);
+    padding: 15px 50px;
+    font-size: 2.4rem;
+    color: var(--white);
+}
+
+.subtitles{
+    width: 100%;
+    background-color: var(--lghtgreen);
+    padding:15px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subtitles ul{
+    width: 80%;
+    list-style-position: inside;
+    font-size: 3.1rem;
+    color: var(--font-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-content{
+    height: 100vh;
+}
