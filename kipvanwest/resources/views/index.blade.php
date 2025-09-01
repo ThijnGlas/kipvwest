@@ -240,7 +240,52 @@
         </div>
     </main>
     <footer>
-        
+        <div class="footer-wrapper">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h2>Contact gegevens</h2>
+                    <a href="">Neckerstraat 39</a>
+                    <a href="">1441 KT Purmerend</a>
+                    <a class="phone-number" href=""><img class="phone" src="{{ asset('images/phone.svg') }}" alt="">
+                        <p>0299 633 787</p>
+                    </a>
+                    <div>
+                        <a href=""><img src="{{ asset('images/instagram.svg') }}" alt=""></a>
+                        <a href=""><img src="{{ asset('images/facebook.svg') }}" alt=""></a>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <h2>Openingstijden</h2>
+                    <div>
+                        <div>
+                            <p>maandag</p>
+                            <p>dinsdag</p>
+                            <p>woensdag</p>
+                            <p>donderdag</p>
+                            <p>vrijdag</p>
+                            <p>zaterdag</p>
+                            <p>zondag</p>
+                        </div>
+                        <div>
+                            <p>gesloten</p>
+                            <p>gesloten</p>
+                            <p>08:00 – 19:00</p>
+                            <p>08:00 – 19:00</p>
+                            <p>08:00 – 19:00</p>
+                            <p>08:00 – 16:00</p>
+                            <p>gesloten</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="zwarte-balk">
+            <div class="zwart-wrapper">
+                <a href="">made by www.thijnjulius.nl</a>
+                <a href="">Copyright © 2025 kipvanwest.nl - All rights reserved</a>
+                <a href="">Algemene voorwaarden</a>
+            </div>
+        </div>
     </footer>
 </body>
 

@@ -1,16 +1,16 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
 }
 
 
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root{
+:root {
     --font-color: #051B0D;
     --lght-font-color: rgba(5, 27, 13, 0.6);
     --white: #fff;
@@ -23,45 +23,45 @@
 }
 
 
-body{
+body {
     font-family: 'Roboto', 'sans-serif';
     background-color: var(--bgwhite);
 }
 
 a {
     all: unset;
-    
+
 }
 
-a:hover{
+a:hover {
     cursor: pointer;
-    
+
 }
 
 
-.navigation-sticky{
+.navigation-sticky {
     z-index: 1000;
     position: sticky;
     top: 0px;
     display: flex;
     justify-content: center;
-    width:100%;
+    width: 100%;
 }
 
-.navigation-wrapper{
+.navigation-wrapper {
     position: absolute;
     margin-top: 20px;
     height: 100px;
-    width: 75%; 
+    width: 75%;
     background-color: var(--drkgreen);
     border-radius: 40px;
     display: flex;
-    
+
     justify-content: center;
     align-items: center;
 }
 
-.navigation{
+.navigation {
     width: 93%;
     height: 100%;
     display: flex;
@@ -69,7 +69,7 @@ a:hover{
     justify-content: space-between;
 }
 
-.navigation ul{
+.navigation ul {
     height: 100%;
     width: 50%;
     color: var(--white);
@@ -80,41 +80,53 @@ a:hover{
     font-size: 3.6rem;
 }
 
-.navigation img{
+.navigation img {
     height: 75%;
     width: auto;
 }
 
 
-h1{
+h1 {
     font-size: 6.4rem;
     color: var(--white);
     font-family: "Playwrite DE Grund", cursive;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    z-index: 100;
 }
 
-h2{
+h2 {
     font-size: 3.6rem;
     font-family: "Playwrite DE Grund", cursive;
 }
 
-h3{
+h3 {
     font-size: 3.1rem;
     font-family: "Playwrite DE Grund", cursive;
 
 }
 
-li{
+li {
     font-family: 'Roboto';
 }
 
-header{
+.phone {
+    height: 2.1rem;
+    width: auto;
+}
+
+footer a {
+    font-size: 2.1rem;
+}
+
+header {
     width: 100%;
-    height: 75vh; 
+    height: 75vh;
     background-color: #8e8e8e;
 
 }
 
-.header-content{
+.header-content {
+
     height: 75vh;
     width: 100%;
     position: absolute;
@@ -124,9 +136,22 @@ header{
     align-items: center;
     justify-content: center;
     gap: 30px;
+    background-image: url(../images/header.png);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: 100% 100%;
+    background-position: center;
 }
 
-.btn{
+.header-content::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.1); 
+    z-index: 1;
+  }
+
+.btn {
     background-color: var(--red);
     padding: 15px 50px;
     text-align: center;
@@ -134,21 +159,21 @@ header{
     color: var(--white);
 }
 
-.btn:hover{
+.btn:hover {
     background-color: var(--drkred);
 
 }
 
-.subtitles{
+.subtitles {
     width: 100%;
     background-color: var(--lghtgreen);
-    padding:15px 0px;
+    padding: 15px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.subtitles ul{
+.subtitles ul {
     width: 70%;
     list-style-position: inside;
     font-size: 3.1rem;
@@ -158,7 +183,7 @@ header{
     align-items: center;
 }
 
-main{
+main {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -166,70 +191,69 @@ main{
     gap: 76px;
 }
 
-.main-content{
-    width: 70%;
-    height: 100vh;
+.main-content {
+    max-width: 70%;
     display: flex;
     flex-direction: column;
     gap: 76px;
 }
 
-.main-content .intro{
+.main-content .intro {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-.main-content .intro > article{
+.main-content .intro>article {
     width: 100%;
     display: flex;
     gap: 24px;
     justify-content: space-between;
 }
 
-.main-content .intro-tekst{
-    min-width: 50%;
-    max-width: 60%;
+.main-content .intro-tekst {
+    max-width: 50%;
     font-size: 2.6rem;
     display: flex;
     flex-direction: column;
-    gap: 21px;
+    gap: 16px;
 }
 
-.main-content .intro article > img{
-    width: 100%;
-    height: auto;
+.main-content .intro article>img {
+    height: 100%;
+    width: auto;
+    border-radius: 20px;
 }
 
-.main-content .btn{
+.main-content .btn {
     width: 10vw;
     margin-top: 3px;
 }
 
-.main-content .productenlijst{
+.main-content .productenlijst {
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
-.main-content .productenlijst > input{
+.main-content .productenlijst>input {
     width: 100%;
-height: 60px;
+    height: 60px;
     border: none;
     border-radius: 20px;
     font-size: 2.1rem;
     text-indent: 20px;
 }
 
-.main-content .productenlijst .productencards{
+.main-content .productenlijst .productencards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 35px;    
+    gap: 35px;
 }
 
-.main-content .productenlijst .productencards > div{
+.main-content .productenlijst .productencards>div {
     min-width: 48%;
     max-width: 80%;
     color: var(--font-color);
@@ -239,39 +263,172 @@ height: 60px;
     padding: 32px 25px;
     display: flex;
     flex-direction: column;
-gap: 21px;
+    gap: 21px;
 }
 
 /* .main-content .productenlijst .productencards > div{
     min-width: 100%;
 } */
 
-.main-content .productenlijst .producten-wrapper{
+.main-content .productenlijst .producten-wrapper {
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
 
-.main-content .productenlijst .productencards > div > div > div{
+.main-content .productenlijst .productencards>div>div>div {
     display: flex;
     justify-content: space-between;
 }
 
-.main-content .productenlijst .productencards > div > div > div .prijs{
+.main-content .productenlijst .productencards>div>div>div .prijs {
     display: flex;
     gap: 5px;
 }
 
-.main-content .productenlijst .productencards > div > div p{
+.main-content .productenlijst .productencards>div>div p {
     font-size: 2.1rem;
 
 }
 
-.main-content .productenlijst .productencards > div > div .per{
+.main-content .productenlijst .productencards>div>div .per {
     font-size: 1.6rem;
     color: var(--lght-font-color);
 }
 
-iframe{
+iframe {
     margin-bottom: 76px;
 }
+
+
+.footer-wrapper {
+    position: relative;
+    width: 100%;
+    background-color: var(--lghtgreen);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0px;
+}
+
+.footer-content {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.footer-content a, .footer-content p{
+    font-size: 2.1rem;
+    line-height: 2.8rem;
+}
+
+.footer-content > div{
+    width: 47%;
+    padding: 32px 25px;
+
+}
+
+.footer-content .footer-left .phone-number{
+    display: flex;
+    gap: 10px;
+}
+
+
+.footer-content > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-content .footer-right > div{
+    display: flex;
+    gap: 30px;
+}
+
+
+footer>div>div img {
+    width: 65px;
+    height: 65px;
+}
+
+footer .zwarte-balk {
+    width: 100%;
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+footer .zwarte-balk .zwart-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+footer .zwarte-balk a{
+    font-size: 1.6rem;
+    color: var(--white);
+}
+
+@media only screen and (max-width: 1237px) {
+    
+    .header-content {
+        background-size: auto 100%;
+
+    }
+
+
+    .main-content .intro article>img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 30px;
+    }
+
+
+  }
+
+  @media only screen and (max-width: 1152px) {
+    .main-content .productenlijst .productencards > div{
+        min-width: 100%;
+    }
+
+    .navigation ul {
+    width: 70%;
+    }
+  }
+
+  @media only screen and (max-width: 1110px) {
+    
+
+  .main-content .intro>article {
+        flex-direction: column-reverse;
+    }
+
+    .main-content .intro article>img {
+        width: 80%;
+        height: auto;
+    }
+
+    .main-content .intro-tekst {
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+    }
+    
+    h3 {
+        font-size: 2.6rem;
+    
+    }
+
+
+  }
+
+  @media only screen and (max-width: 930px) {
+    
+    .subtitles ul {
+font-size: 2.6rem;    }
+  }
