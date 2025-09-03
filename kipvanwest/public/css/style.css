@@ -8,7 +8,50 @@
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* PlaywriteDEGrund varianten */
+@font-face {
+    font-family: 'PlaywriteDEGrund';
+    src: url('/css/fonts/PlaywriteDEGrund-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PlaywriteDEGrund';
+    src: url('/css/fonts/PlaywriteDEGrund-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PlaywriteDEGrund';
+    src: url('/css/fonts/PlaywriteDEGrund-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PlaywriteDEGrund';
+    src: url('/css/fonts/PlaywriteDEGrund-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* Roboto variabel font */
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    src: url('/css/fonts/Roboto-Variable...wght.ttf') format('truetype');
+    font-weight: 100 900; /* ondersteunt alle gewichten */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    src: url('/css/fonts/Roboto-Italic-Variable...wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
 
 :root {
     --font-color: #051B0D;
@@ -61,8 +104,70 @@ a:hover {
     align-items: center;
 }
 
+/* Overlay standaard onzichtbaar */
+.overlay {
+    position: fixed;
+    inset: 0; /* top:0, left:0, right:0, bottom:0 */
+    background: var(--drkgreen);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease-in-out;
+    z-index: 1500;
+  }
+  
+  .overlay ul {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    list-style: none;
+    text-align: center;
+  }
+  
+  .overlay ul li a {
+    font-size: 3.2rem;
+    color: var(--white);
+    text-decoration: none;
+  }
+  
+  /* Actief menu */
+  .overlay.active {
+    transform: translateY(0);
+  }
+  
+  /* Hamburger */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 2001; /* boven overlay */
+    position: relative;
+  }
+  
+  .hamburger span {
+    width: 30px;
+    height: 3px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  
+  /* kruis animatie */
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+  
+
 .navigation {
-    width: 93%;
+    width: 90%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -85,28 +190,57 @@ a:hover {
     width: auto;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 2000; /* boven je menu */
+  }
+  
+  .hamburger span {
+    width: 30px;
+    height: 3px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  
+  /* Menu standaard */
+  .navigation ul {
+    transition: all 0.3s ease-in-out;
+  }
+  
 
 h1 {
     font-size: 6.4rem;
     color: var(--white);
-    font-family: "Playwrite DE Grund", cursive;
+    font-family: 'PlaywriteDEGrund', sans-serif;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
     z-index: 100;
 }
 
 h2 {
     font-size: 3.6rem;
-    font-family: "Playwrite DE Grund", cursive;
+    font-family: 'PlaywriteDEGrund', sans-serif;
 }
 
 h3 {
     font-size: 3.1rem;
-    font-family: "Playwrite DE Grund", cursive;
+    font-family: 'PlaywriteDEGrund', sans-serif;
 
 }
 
 li {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    font-family: 'Roboto', sans-serif;
 }
 
 .phone {
@@ -138,8 +272,7 @@ header {
     gap: 30px;
     background-image: url(../images/header.png);
     background-repeat: no-repeat;
-    object-fit: cover;
-    background-size: 100% 100%;
+    background-size: cover;
     background-position: center;
 }
 
@@ -153,7 +286,7 @@ header {
 
 .btn {
     background-color: var(--red);
-    padding: 15px 50px;
+    padding: 15px 1.3em;
     text-align: center;
     font-size: 2.4rem;
     color: var(--white);
@@ -174,11 +307,13 @@ header {
 }
 
 .subtitles ul {
+    flex-wrap: wrap;
     width: 70%;
     list-style-position: inside;
     font-size: 3.1rem;
     color: var(--font-color);
     display: flex;
+    gap: 20px;
     justify-content: space-between;
     align-items: center;
 }
@@ -389,9 +524,16 @@ footer .zwarte-balk a{
 
   }
 
-  @media only screen and (max-width: 1152px) {
+  @media only screen and (max-width: 1245px) {
     .main-content .productenlijst .productencards > div{
         min-width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 1152px) {
+    
+    .navigation-wrapper{
+        width: 90%;
     }
 
     .navigation ul {
@@ -428,7 +570,51 @@ footer .zwarte-balk a{
   }
 
   @media only screen and (max-width: 930px) {
+
+    .subtitles ul {
+        justify-content: center;
+    }
     
+    .footer-content{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .footer-content > div{
+        width: 100%;
+    }
+
+    footer .zwarte-balk .zwart-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
     .subtitles ul {
 font-size: 2.6rem;    }
+
+.navigation ul {
+    display: none; /* gewone menu niet tonen */
+  }
+  .hamburger {
+    display: flex;
+  }
+  
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+  }
+
+  @media only screen and (max-width: 750px){
+    .navigation{
+        width: 85%;
+    }
   }

@@ -1,24 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kip van West</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <script src="{{ asset('js/menu.js') }}"></script>
+
 </head>
 
 <body>
     <div class="navigation-sticky">
         <div class="navigation-wrapper">
-            <nav class="navigation">
-                <img src="{{ asset('images/logo.png') }}" alt="">
-                <ul>
-                    <li><a href="">Over ons</a></li>
-                    <li><a href="">Onze productlijst</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </nav>
+        <nav class="navigation">
+    <img src="{{ asset('images/logo.png') }}" alt="">
+
+    <ul>
+        <li><a href="">Over ons</a></li>
+        <li><a href="">Onze productlijst</a></li>
+        <li><a href="">Contact</a></li>
+    </ul>
+
+    <!-- Hamburger knop -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+
+<!-- Fullscreen overlay menu -->
+<div class="overlay" id="menu">
+    <ul>
+        <li><a href="">Over ons</a></li>
+        <li><a href="">Onze productlijst</a></li>
+        <li><a href="">Contact</a></li>
+    </ul>
+</div>
+
         </div>
 
     </div>
