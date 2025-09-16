@@ -7,6 +7,10 @@
     font-size: 62.5%;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 
 /* PlaywriteDEGrund varianten */
 @font-face {
@@ -60,6 +64,7 @@
     --black: #000;
     --bgwhite: #F2F2F2;
     --drkgreen: #385C45;
+    --drkrgreen: hsl(142, 24%, 19%);
     --lghtgreen: #D0DED5;
     --red: #ED1822;
     --drkred: hsl(357, 86%, 41%);
@@ -70,6 +75,10 @@ body {
     font-family: 'Roboto', 'sans-serif';
     background-color: var(--bgwhite);
 }
+
+button {
+    all: unset;
+  }
 
 a {
     all: unset;
@@ -292,6 +301,10 @@ header {
     color: var(--white);
 }
 
+header .btn{
+    z-index: 1000;
+}
+
 .btn:hover {
     background-color: var(--drkred);
 
@@ -326,6 +339,21 @@ main {
     gap: 76px;
 }
 
+main>a{
+    width: 40px;
+    padding: 15px;
+    height: auto;
+    background-color: var(--red);
+    position: fixed;
+    border-radius: 100%;
+    right: 30px;
+    bottom: 30px;
+}
+
+main > a:hover{
+    background-color: var(--drkred); 
+}
+
 .main-content {
     max-width: 70%;
     display: flex;
@@ -354,6 +382,8 @@ main {
     gap: 16px;
 }
 
+
+
 .main-content .intro article>img {
     height: 100%;
     width: auto;
@@ -371,7 +401,25 @@ main {
     gap: 25px;
 }
 
-.main-content .productenlijst>input {
+.main-content .productenlijst form{
+    display: grid;
+    grid-template-columns: 1fr min-content; 
+    grid-gap: 20em;
+}
+
+.main-content .productenlijst form button{
+    height: 60px;
+    font-size: 2.1rem;
+    padding: 0 1em;
+    background-color: var(--drkgreen);
+    color: var(--white);
+}
+
+.main-content .productenlijst form button:hover{
+    background-color: var(--drkrgreen);
+}
+
+.main-content .productenlijst input {
     width: 100%;
     height: 60px;
     border: none;
@@ -384,7 +432,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 35px;
 }
 
@@ -414,6 +462,7 @@ main {
 .main-content .productenlijst .productencards>div>div>div {
     display: flex;
     justify-content: space-between;
+    gap: 8px;
 }
 
 .main-content .productenlijst .productencards>div>div>div .prijs {
@@ -428,6 +477,8 @@ main {
 
 .main-content .productenlijst .productencards>div>div .per {
     font-size: 1.6rem;
+    white-space: nowrap;
+    text-align: right;
     color: var(--lght-font-color);
 }
 
@@ -437,7 +488,7 @@ iframe {
 
 
 .footer-wrapper {
-    position: relative;
+    position: static;
     width: 100%;
     background-color: var(--lghtgreen);
     display: flex;
@@ -456,6 +507,11 @@ iframe {
 .footer-content a, .footer-content p{
     font-size: 2.1rem;
     line-height: 2.8rem;
+}
+
+footer h2{ 
+    line-height: 5rem;
+  margin-bottom: 0.4em;
 }
 
 .footer-content > div{
@@ -514,19 +570,19 @@ footer .zwarte-balk a{
     }
 
 
-    .main-content .intro article>img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        border-radius: 30px;
-    }
-
-
   }
 
   @media only screen and (max-width: 1245px) {
     .main-content .productenlijst .productencards > div{
         min-width: 100%;
+    }
+
+    .navigation-wrapper{
+        width: 84%;
+    }
+
+    .main-content{
+        max-width: 80%;
     }
   }
 
@@ -548,10 +604,14 @@ footer .zwarte-balk a{
         flex-direction: column-reverse;
     }
 
-    .main-content .intro article>img {
-        width: 80%;
-        height: auto;
+    .main-content .intro article img {
+        height: 350px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
     }
+
+
 
     .main-content .intro-tekst {
         max-width: 100%;
@@ -566,6 +626,9 @@ footer .zwarte-balk a{
     
     }
 
+    .main-content .intro-tekst .btn-intro {
+        width: 18vw;
+    }
 
   }
 
@@ -618,3 +681,88 @@ font-size: 2.6rem;    }
         width: 85%;
     }
   }
+
+  @media only screen and (max-width: 675px) {
+    .main-content .intro-tekst .btn-intro {
+        width: 25vw;
+    }
+
+    .navigation-wrapper{
+        height: 75px;
+    }
+
+    .header-content, header{
+        height: 60vh;
+    }
+
+    .navigation-wrapper {
+        width: 96%;
+      }
+    
+    .footer-content{
+        width: 95%;
+    }
+
+      h1{
+        font-size: 5rem !important;
+      }
+
+      p{
+        font-size: 1.8rem !important;
+      }
+
+      .per{
+        font-size: 1.4rem !important;
+
+      }
+
+      a{
+        font-size: 1.8rem !important;
+      }
+
+      .overlay ul li a{
+        font-size: 3.8rem !important;
+      }
+      footer .zwarte-balk a {
+        font-size: 1.2rem !important;
+        padding: 0.2em;
+
+      }
+
+      .main-content {
+        max-width: 85%;
+      }
+
+      .main-content .productenlijst form button{
+        font-size: 1.6rem;
+      }
+
+      .main-content .productenlijst input{
+        font-size: 1.6rem;
+      }
+}
+
+@media only screen and (max-width: 380px) {
+    h1{
+        font-size: 4rem !important;
+      }
+
+      h3{
+        font-size: 2rem;
+      }
+
+      p,a{
+        font-size: 1.6rem !important;
+      }
+
+      footer a, footer p{
+        font-size: 1.8rem !important;
+
+      }
+
+      .per{
+        font-size: 1.3rem !important;
+
+      }
+
+}
